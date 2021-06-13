@@ -8,7 +8,7 @@ import {IMovie} from "../interfaces/movie";
   providedIn: 'root'
 })
 export class MovieResolveService implements Resolve<IMovie[]>{
-private url = 'https://developers.themoviedb.org/3/discover/movie-discover'
+private url = 'https://api.themoviedb.org/3/discover/movie?page=2'
   constructor(private httpClient: HttpClient) { }
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IMovie[]> | Promise<any> | any {
     return this.httpClient.get(this.url, {headers: new HttpHeaders({

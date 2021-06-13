@@ -19,7 +19,7 @@ import {HeaderComponent} from "../../header/header.component";
   imports: [
     CommonModule,
     MovieListRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ]
 })
 export class MovieListModule { }
