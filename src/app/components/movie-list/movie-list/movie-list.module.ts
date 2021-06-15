@@ -6,20 +6,30 @@ import {MovieListComponent} from "../movie-list.component";
 
 import {MovieListCardComponent} from "../movie-list-card/movie-list-card.component";
 import {HttpClientModule} from "@angular/common/http";
-import {HeaderComponent} from "../../header/header.component";
+import {MovieInfoComponent} from "../../movie-info/movie-info.component";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {GenrePipe} from "../../genre.pipe";
+
+
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     MovieListComponent,
-    MovieListCardComponent
+    MovieListCardComponent,
+    MovieInfoComponent,
+    GenrePipe
   ],
   imports: [
     CommonModule,
     MovieListRoutingModule,
     HttpClientModule,
-  ]
+    MatPaginatorModule,
+
+  ],
+  exports: [
+    GenrePipe
+  ],
 })
 export class MovieListModule { }
