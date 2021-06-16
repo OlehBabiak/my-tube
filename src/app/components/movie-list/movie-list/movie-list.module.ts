@@ -8,7 +8,11 @@ import {MovieListCardComponent} from "../movie-list-card/movie-list-card.compone
 import {HttpClientModule} from "@angular/common/http";
 import {MovieInfoComponent} from "../../movie-info/movie-info.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {GenrePipe} from "../../genre.pipe";
+import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from "@angular/material/button";
+
+
 
 
 
@@ -19,17 +23,18 @@ import {GenrePipe} from "../../genre.pipe";
     MovieListComponent,
     MovieListCardComponent,
     MovieInfoComponent,
-    GenrePipe
   ],
   imports: [
     CommonModule,
     MovieListRoutingModule,
     HttpClientModule,
     MatPaginatorModule,
-
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule
   ],
   exports: [
-    GenrePipe
+
   ],
 })
 export class MovieListModule { }

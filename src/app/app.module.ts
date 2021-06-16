@@ -7,10 +7,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {HeaderComponent} from "./components/header/header.component";
 import {AlertModule} from "ngx-bootstrap/alert";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import {MatCardModule} from '@angular/material/card';
-import {MovieListModule} from "./components/movie-list/movie-list/movie-list.module";
-import {GnrMModule} from "./components/genres/gnr-m/gnr-m.module";
+import { MovieListByGenreComponent } from './components/movie-list-by-genre/movie-list-by-genre/movie-list-by-genre.component';
+import {MatMenuModule} from '@angular/material/menu'
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import {MatSelectModule} from "@angular/material/select";
+
+
+
 
 
 const routes: Routes = [
@@ -22,6 +27,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    MovieListByGenreComponent,
+    UserInfoComponent,
 
   ],
   imports: [
@@ -30,10 +37,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AlertModule.forRoot(),
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatCardModule,
-    MovieListModule,
-    GnrMModule
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   exports: [

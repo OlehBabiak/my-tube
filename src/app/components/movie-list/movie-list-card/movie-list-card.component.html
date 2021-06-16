@@ -1,58 +1,21 @@
-<div class="movie-list-card" (click)="movie_details()">
-  <p>ID: {{movie.id}}</p>
-  <p>Overview: {{movie.overview}}</p>
-  <p>Popularity: {{movie.popularity}}</p>
-  <p>Title: {{movie.title}}</p>
-<!--  <p *ngFor="let g of genres | genrePipe: movie.genre_ids">{{g}}</p>-->
-</div>
-
-<!--<div class="movie-card">-->
-
-<!--  <div class="container">-->
-
-<!--    <div (click)="movie_details()"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_cover.jpg" alt="cover" class="cover"/><div>-->
-
-<!--    <div class="hero">-->
-
-<!--      <div class="details">-->
-
-<!--        <div class="title1">{{movie.title}}</div>-->
-
-<!--        <div class="title2">Popularity: {{movie.popularity}}</div>-->
-
-<!--        <fieldset class="rating">-->
-<!--          <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>-->
-<!--          <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-<!--          <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>-->
-<!--          <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-<!--          <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>-->
-<!--          <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-<!--          <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>-->
-<!--          <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-<!--          <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>-->
-<!--          <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-<!--        </fieldset>-->
-
-<!--        <span class="likes">109 likes</span>-->
-
-<!--      </div> &lt;!&ndash; end details &ndash;&gt;-->
-
-<!--    </div> &lt;!&ndash; end hero &ndash;&gt;-->
-
-<!--    <div class="description">-->
-
-<!--      <div class="column1">-->
-<!--        <span class="tag"></span>-->
-
-<!--      </div> &lt;!&ndash; end column1 &ndash;&gt;-->
-
-<!--      <div class="column2">-->
-
-<!--        <p>{{movie.overview}}</p>-->
-
-<!--      </div> &lt;!&ndash; end column2 &ndash;&gt;-->
-<!--    </div> &lt;!&ndash; end description &ndash;&gt;-->
+<mat-card class="example-card" (click)="movie_details()">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{movie.title}}</mat-card-title>
+    <mat-card-subtitle>Adult: {{adult}}</mat-card-subtitle>
+    <h3>Genres:</h3>
+    <mat-card-subtitle *ngFor="let g of genresOfEachMovie">{{g}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Some movie photo here">
+  <mat-card-content>
+    <p>
+      {{movie.overview}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
 
 
-<!--  </div> &lt;!&ndash; end container &ndash;&gt;-->
-<!--</div> &lt;!&ndash; end movie-card &ndash;&gt;-->

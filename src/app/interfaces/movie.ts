@@ -4,5 +4,6 @@ export interface IMovie {
   overview: string;
   popularity: number;
   title: string;
-  genre_ids: any
+  genre_ids: any;
+  adult: boolean
 }

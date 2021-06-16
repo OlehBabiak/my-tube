@@ -16,10 +16,11 @@ export class MovieListComponent implements OnInit {
 
 movies: IMovie[] = []
 genres: IGenre[]
-pageSlice = this.movies.slice(0, 2)
+pageSlice = this.movies.slice(0, 4)
   constructor(private movieService: MovieResolveService, private activatedRoute: ActivatedRoute) {
    this.activatedRoute.data.subscribe(({movies:{results}, genres: {genres}})=> {
      this.movies = results
+     this.genres = genres
    })
       }
 
@@ -27,14 +28,12 @@ pageSlice = this.movies.slice(0, 2)
   ngOnInit(): void {
   }
 
-OnPageCange(event: PageEvent){
-  console.log(event)
+onPageChange(event: PageEvent){
 const startIndex = event.pageIndex * event.pageSize;
 let endIndex = startIndex + event.pageSize;
 if (endIndex > this.movies.length){
   endIndex = this.movies.length
 }
 this.pageSlice = this.movies.slice(startIndex, endIndex)
-  console.log(this.pageSlice)
 }
 }

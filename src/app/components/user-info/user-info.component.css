@@ -1,0 +1,15 @@
+.logo-user{
+  width: 25px;
+  margin: 0 40px;
+  cursor: pointer
+}
+.user-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer
+}
+
+.zzz{
+  vertical-align:bottom
+}

@@ -1,6 +1,20 @@
 <div class="header">
-<p  [routerLink]="['all-movies']">All movies</p>
-<p  [routerLink]="['all-genres']">All genres</p>
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button [routerLink]="['all-movies']" mat-menu-item>All movies</button>
+      <button [routerLink]="['all-genres']" mat-menu-item>All genres</button>
+    </mat-menu>
+  </div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="theme">Change theme</button>
+    <mat-menu #theme="matMenu">
+      <button mat-menu-item>Dark theme</button>
+      <button mat-menu-item>Light theme</button>
+    </mat-menu>
+  </div>
+  <div><app-user-info></app-user-info></div>
+
 </div>
 
 

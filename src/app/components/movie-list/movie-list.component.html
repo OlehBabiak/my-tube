@@ -1,12 +1,12 @@
 <div class="test-movie-list">
-  <div class="movie-list"><app-movie-list-card *ngFor="let movie of movies" [movie] = movie [genres]="genres"
+  <div class="movie-list"><app-movie-list-card *ngFor="let movie of pageSlice" [movie] = movie [genres]="genres"
   ></app-movie-list-card>
   </div>
   <mat-paginator
     [length]="this.movies.length"
-    [pageSize]="2"
-    [pageSizeOptions]="[1, 2]"
-    (page)="OnPageCange($event)"
+    [pageSize]="1"
+    [pageSizeOptions]="[1, 2, 4, 8, 16, 20]"
+    (page)="onPageChange($event)"
   ></mat-paginator>
 
   </div>
