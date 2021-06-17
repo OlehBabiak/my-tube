@@ -1,10 +1,14 @@
 <mat-card class="example-card" [routerLink]="[movie.id]">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{movie.id}}</mat-card-title>
-    <mat-card-subtitle>Adult: {{adult}}</mat-card-subtitle>
-    <h3>Genres:</h3>
-    <mat-card-subtitle *ngFor="let g of genresOfEachMovie">{{g}}</mat-card-subtitle>
+    <mat-card-title class="subtitle">Movie ID: {{movie.id}}</mat-card-title>
+    <mat-card-subtitle class="subtitle">Name: {{movie.title}}</mat-card-subtitle>
+    <mat-card-subtitle class="subtitle">Adult: {{adult}}</mat-card-subtitle>
+    <div>
+      <h3>Genres:</h3>
+      <mat-card-subtitle *ngFor="let g of genresOfEachMovie">{{g}}</mat-card-subtitle>
+    </div>
+
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Some movie photo here">
   <mat-card-content>

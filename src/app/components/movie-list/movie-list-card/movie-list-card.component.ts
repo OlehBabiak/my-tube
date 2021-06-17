@@ -19,9 +19,7 @@ genres: IGenre[]
 adult = ''
 genresOfEachMovie: any[] = []
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private movieService: MovieResolveService) {
-    // this.activatedRoute.data.subscribe(({genres:{genres}})=> {
-    //   this.genres = genres
-    //      })
+
   }
 
   ngOnInit(): void {
@@ -29,19 +27,13 @@ this.movie.adult? this.adult = 'Yes': this.adult = 'NO';
 //=============================
 let genresOfEachMovie: any = this.genres.filter(gnr => {
   return this.movie.genre_ids.indexOf(gnr.id) != -1
-  console.log('genresOfEachMovie', genresOfEachMovie)
-})
 
-    genresOfEachMovie.forEach((elementObj:any)=> {
-      for (let element in elementObj) {
-        if(elementObj.hasOwnProperty(element)){
-          this.genresOfEachMovie.push(elementObj[element])
-        }
-      }
-    })
+})
+    console.log('genresOfEachMovie1', genresOfEachMovie)
+    for (const genresOfEachMovieElement of genresOfEachMovie) {
+      let {name} = genresOfEachMovieElement
+      this.genresOfEachMovie.push(name)
+    }
   }
-//===================================
-//   movie_details() {
-//     this.router.navigate([this.movie.id], {relativeTo: this.activatedRoute, state: this.movie})
-//      }
+
 }
