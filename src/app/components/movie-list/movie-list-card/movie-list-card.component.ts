@@ -41,7 +41,7 @@ let genresOfEachMovie: any = this.genres.filter(gnr => {
     })
   }
 //===================================
-  movie_details() {
-    this.router.navigate([this.movie.id], {relativeTo: this.activatedRoute, state: this.movie})
-     }
+//   movie_details() {
+//     this.router.navigate([this.movie.id], {relativeTo: this.activatedRoute, state: this.movie})
+//      }
 }

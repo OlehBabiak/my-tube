@@ -1,1 +1,15 @@
-<p>movie-list-by-genre works!</p>
+<div>
+  <div>
+    <app-genre-list-card></app-genre-list-card>
+  </div>
+
+  <mat-paginator
+    [length]="this.movies.length"
+    [pageSize]="1"
+    [pageSizeOptions]="[1, 2, 4, 8, 16, 20]"
+    (page)="onPageChange($event)"
+  ></mat-paginator>
+
+</div>
+
+
