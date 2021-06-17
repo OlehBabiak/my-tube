@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {MoviesByGenresService} from "../../services/movies-by-genres.service";
 import {IMovieDetail} from "../../interfaces/movie-detail";
 import {MovieByIdService} from "../../services/movie-by-id.service";
 
@@ -12,25 +11,21 @@ import {MovieByIdService} from "../../services/movie-by-id.service";
 })
 export class MovieInfoComponent implements OnInit {
   movieById: IMovieDetail
+  adult = ''
 
-
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private movieService: MovieByIdService) {
-    // this.activatedRoute.params.subscribe((params =>{
-    //   console.log(params)
-    //   this.movie = this.router.getCurrentNavigation()?.extras.state as IMovie
-    //   console.log('This movie: ', this.movie)
-    // }))
-  }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private movieService: MovieByIdService) {}
 
   ngOnInit(): void {
+
+
 this.activatedRoute.params.subscribe(params=>{
   console.log('params: ', params)
   this.movieService.getMovieByID(params.id).subscribe(value => {
-//????????????????????????
     console.log('val; ', value)
 this.movieById = value
   })
 })
-  }
+    this.movieById.adult? this.adult = 'Yes': this.adult = 'NO';  //???????????????????
 
+  }
 }

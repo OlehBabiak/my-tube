@@ -13,6 +13,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import {MatSelectModule} from "@angular/material/select";
+import { GenreListCardComponent } from './components/genres/genre/genre-list-card/genre-list-card.component';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 
 
@@ -29,6 +31,7 @@ const routes: Routes = [
     HeaderComponent,
     MovieListByGenreComponent,
     UserInfoComponent,
+    GenreListCardComponent,
 
   ],
   imports: [
@@ -40,7 +43,8 @@ const routes: Routes = [
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
   ],
   providers: [],
   exports: [

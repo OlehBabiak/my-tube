@@ -8,5 +8,6 @@ overview: string;
 runtime: number;
 spoken_languages: [];
 status: string;
-original_title: string
+original_title: string;
+release_date: string
 }
