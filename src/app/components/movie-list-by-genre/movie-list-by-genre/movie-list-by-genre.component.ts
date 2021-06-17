@@ -13,14 +13,14 @@ import {IGenre} from "../../../interfaces/genre";
 export class MovieListByGenreComponent implements OnInit {
 movies: IMovie[] = []
   genres: IGenre[]
+  result:any
   pageSlice = this.movies.slice(0, 4)
   constructor(private moviesByGenresService: MoviesByGenresService) {}
 
 
   ngOnInit(): void {
-    this.moviesByGenresService.getMoviesByGenres(14).subscribe(value => {
-      let aaa = value
-      console.log(aaa)  //неможу доступитись до обэкта
+    this.moviesByGenresService.getMoviesByGenres('').subscribe(value => {
+    // як дістати масив result?? і як параметром закинути жанр з кнопки
     })
   }
 

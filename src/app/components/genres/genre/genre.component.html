@@ -1,7 +1,13 @@
-<!--<p >{{genre.name}}</p>-->
-<mat-selection-list [routerLink]="[':id']">
-  <mat-list-option>
-    {{genre.name}}
-  </mat-list-option>
-</mat-selection-list>
+<!--&lt;!&ndash;<p >{{genre.name}}</p>&ndash;&gt;-->
+<!--<mat-selection-list [routerLink]="[genre.name]">-->
+<!--  <mat-list-option>-->
+<!--    {{genre.name}}-->
+<!--  </mat-list-option>-->
+<!--</mat-selection-list>-->
 
+<section>
+  <div class="example-label"></div>
+  <div class="example-button-row">
+    <button mat-button color="accent" >{{genre.name}}</button>
+  </div>
+</section>

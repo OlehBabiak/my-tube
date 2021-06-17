@@ -8,7 +8,7 @@ import {MovieListByGenreComponent} from "../../movie-list-by-genre/movie-list-by
 
 const routes: Routes = [
   {path: '', component: GenresComponent, resolve: {genres: GenreBudgesResolveService}, children: [
-      {path: ':id', component: MovieListByGenreComponent}
+      {path: ':movie_of_genre', component: MovieListByGenreComponent}
     ]},
 ];
 
