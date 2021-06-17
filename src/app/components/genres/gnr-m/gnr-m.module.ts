@@ -7,6 +7,7 @@ import {GenreComponent} from "../genre/genre.component";
 import {HttpClientModule} from "@angular/common/http";
 import {MatListModule} from "@angular/material/list";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     GnrMRoutingModule,
     HttpClientModule,
     MatListModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatButtonModule
   ]
 })
 export class GnrMModule { }
