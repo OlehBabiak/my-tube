@@ -15,12 +15,14 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import {MatSelectModule} from "@angular/material/select";
 import { GenreListCardComponent } from './components/genres/genre/genre-list-card/genre-list-card.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { HomeComponent } from './components/home/home.component';
 
 
 
 
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'all-movies', loadChildren: ()=> import('./components/movie-list/movie-list/movie-list.module').then(m=> m.MovieListModule)},
   {path: 'all-genres', loadChildren: ()=> import('./components/genres/gnr-m/gnr-m.module').then(m=> m.GnrMModule)},
   ]
@@ -32,6 +34,7 @@ const routes: Routes = [
     MovieListByGenreComponent,
     UserInfoComponent,
     GenreListCardComponent,
+    HomeComponent,
 
   ],
   imports: [
